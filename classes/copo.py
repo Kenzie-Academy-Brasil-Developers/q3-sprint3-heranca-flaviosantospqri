@@ -15,7 +15,7 @@ class Copo(Recipiente):
         return 'Não se pode encher um copo sujo'    
         
 
-    def beber(self, quantidade):
+    def beber(self, quantidade: float):
         if quantidade < 0:
             return f'Quantidade deve ser positiva'
         elif quantidade > self.tamanho or quantidade > self.conteudo:
