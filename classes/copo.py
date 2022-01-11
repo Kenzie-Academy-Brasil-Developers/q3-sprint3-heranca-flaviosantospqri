@@ -8,6 +8,7 @@ class Copo(Recipiente):
         super().__init__(tamanho, conteudo, limpo)
         
     def encher(self,  bebida: str = 'água' ):
+        self.bebida = bebida
         if self.limpo == True:
             self.bebida = bebida
             self.conteudo = self.tamanho
@@ -16,6 +17,7 @@ class Copo(Recipiente):
         
 
     def beber(self, quantidade: float):
+        self.quantidade = quantidade
         if quantidade < 0:
             return f'Quantidade deve ser positiva'
         elif quantidade > self.tamanho or quantidade > self.conteudo:
